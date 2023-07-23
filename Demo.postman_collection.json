@@ -1,0 +1,95 @@
+{
+	"info": {
+		"_postman_id": "16a92adb-033e-417e-8ef9-2cb474357390",
+		"name": "Demo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20917965",
+		"_collection_link": "https://blue-shuttle-134272.postman.co/workspace/My-Workspace~4deff75e-2210-49b7-87f0-18ddc6675232/collection/20917965-16a92adb-033e-417e-8ef9-2cb474357390?action=share&creator=20917965&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "Reschedule",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 3,\n    \"serviceDate\": \"2023-07-25\",\n    \"serviceStartTime\": 20,\n    \"serviceEndTime\": 21\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/appointments/reschedule",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"appointments",
+						"reschedule"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Book",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"operatorId\": 2,\n    \"customerId\": 1,\n    \"serviceDate\": \"2023-07-24\",\n    \"serviceStartTime\": 18,\n    \"serviceEndTime\": 19\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/appointments/book",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"appointments",
+						"book"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/appointments/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"appointments",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
